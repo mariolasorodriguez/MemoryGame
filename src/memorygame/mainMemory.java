@@ -7,7 +7,6 @@ public class mainMemory {
 		 * @version 1.0
 		 * */
 		
-
 	}
 }
 
