@@ -3,6 +3,7 @@ package memorygame;
 public class Carta {
 
 	private int valor;
+	
 	private boolean descubierta;
 
 	public Carta(int valor) {
