@@ -2,36 +2,36 @@ package memorygame;
 
 public class Carta {
 
-	private int valor;
+	private int number;
 	
-	private boolean descubierta;
+	private boolean discovered;
 
-	public Carta(int valor) {
+	public Carta(int number) {
 
-		this.valor = valor;
+		this.number = number;
 
-		this.descubierta = false;
+		this.discovered = false;
 	}
 
-	public int getValor() {
-		return valor;
+	public int getNumber() {
+		return number;
 	}
 
-	public void setValor(int valor) {
-		this.valor = valor;
+	public void setNumber(int number) {
+		this.number = number;
 	}
 
-	public boolean isDescubierta() {
-		return descubierta;
+	public boolean isDiscovered() {
+		return discovered;
 	}
 
-	public void setDescubierta(boolean descubierta) {
-		this.descubierta = descubierta;
+	public void setDiscovered(boolean discovered) {
+		this.discovered = discovered;
 	}
 
 	public String toString() {
-		if (descubierta) {
-			return " " + valor + " ";
+		if (discovered) {
+			return " " + number + " ";
 		} else {
 			return " X ";
 		}
