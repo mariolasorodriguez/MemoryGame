@@ -4,12 +4,12 @@ package memorygame;
  * Represents a single card in the Memory Game.
  * Each card has a number and a discovered state.
  */
-public class Carts {
+public class Card {
 
     private final int number;
     private boolean discovered;
 
-    public Carts(int number) {
+    public Card(int number) {
         this.number = number;
         this.discovered = false;
     }

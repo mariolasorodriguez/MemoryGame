@@ -10,7 +10,7 @@ import java.util.List;
 public class Panel {
 
     private final int size;
-    private final Carts[][] board;
+    private final Card[][] board;
 
     public Panel(int size) {
         if (size < 2 || size % 2 != 0) {
@@ -18,7 +18,7 @@ public class Panel {
         }
 
         this.size = size;
-        this.board = new Carts[size][size];
+        this.board = new Card[size][size];
         initializeBoard();
     }
 
@@ -37,19 +37,19 @@ public class Panel {
         int index = 0;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                board[i][j] = new Carts(numbers.get(index++));
+                board[i][j] = new Card(numbers.get(index++));
             }
         }
     }
 
-    public Carts getCard(int row, int col) {
+    public Card getCard(int row, int col) {
         validatePosition(row, col);
         return board[row][col];
     }
 
     public boolean checkMatch(int r1, int c1, int r2, int c2) {
-        Carts c1Card = getCard(r1, c1);
-        Carts c2Card = getCard(r2, c2);
+        Card c1Card = getCard(r1, c1);
+        Card c2Card = getCard(r2, c2);
 
         if (c1Card.getNumber() == c2Card.getNumber()) {
             c1Card.reveal();
